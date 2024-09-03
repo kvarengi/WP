@@ -1,8 +1,5 @@
-from sqlalchemy import Boolean, Float, ForeignKey
-from sqlalchemy import String
-from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import mapped_column
+from sqlalchemy import Boolean, Float, ForeignKey, String
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
 class Base(DeclarativeBase):
@@ -13,6 +10,9 @@ class User(Base):
     __tablename__ = "users"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    username: Mapped[str] = mapped_column(String(40))
+    salt: Mapped[str] = mapped_column(String())
+    username_password_salt_hash: Mapped[str] = mapped_column(String(64))
     is_admin: Mapped[bool] = mapped_column(Boolean(), default=False)
     tg_user_id: Mapped[int]
     matter_ballance: Mapped[float] = mapped_column(Float(precision=64))
@@ -45,7 +45,7 @@ class Block(Base):
     __tablename__ = "blocks"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    state: Mapped[int]  # HZ cho eto
+    state: Mapped[int]
     prev_block_hash: Mapped[str]  # = mapped_column(String( TODO : add max hash length))
     created_at: Mapped[int]  # UNIX timestamp
 

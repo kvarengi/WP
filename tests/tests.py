@@ -1,7 +1,7 @@
 import unittest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from src.database import models
+from binary_options_bot.database import models
 from sqlalchemy import select
 
 
@@ -19,7 +19,7 @@ class TestDBMethods(unittest.TestCase):
                 tg_user_id=12345,
                 matter_ballance=0.234,
                 idea_ballance=2.412,
-                tg_wallet_or_metamask_address="nu adress",
+                tg_wallet_or_metamask_address="address",
                 created_at=17253067532,
             )
             bet = models.Bet(
