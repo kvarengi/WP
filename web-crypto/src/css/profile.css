@@ -1,0 +1,57 @@
+    .token-balance-area {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 100px;
+        
+    }
+
+    .token-idea {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .token-matter {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .prise-idea {
+        float: right;
+        display: block;
+    }
+
+    .prise-matter {
+        float: right;
+        display: flex;
+    }
+
+    .amount-idea {
+        display: block;
+        position: absolute;
+        top: 225px;
+        right: 320px;
+        font-size: 12px;
+    }
+
+    .amount-matter {
+        display: block;
+        position: absolute;
+        top: 367px;
+        right: 320px;
+        font-size: 12px;
+    }
+
+
+    .token-matter {
+        display: flex;
+        margin-top: 100px;
+    }
+
+    .usd {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 200px;
+    }

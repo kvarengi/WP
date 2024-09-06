@@ -1,0 +1,17 @@
+.tokens-selection::before {
+    color: #941c20;
+    font-weight: bold;
+    content: "$$$";
+    top: 8px;
+    font-size: 25px;
+    position: absolute;
+    right: 40px;
+    text-align: center;
+    padding: 10px;
+    padding-right: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+
+}

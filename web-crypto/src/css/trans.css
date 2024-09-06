@@ -1,0 +1,26 @@
+.transactions-area {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 550px;
+    overflow: scroll;
+    margin-top: 5px;
+    padding: 5px;
+    width: 95%;
+}
+
+
+.strans {
+    margin-top: 10px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+
+.ntrans {
+    display: flex;
+    text-align: center;
+    margin-top: 200px;
+
+}
+
