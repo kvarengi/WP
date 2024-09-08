@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bets</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header class="container-header">
+    </header>
+    <div class="dashboard">
+        
+        <div class="dashboard-nav">
+            <div class="nav">
+                <div class="nav-logo">
+                    <div class="logo">
+                        <a href="{% url 'bet' %}">
+                            <img src="{% static 'img/wallet-svgrepo-com.svg' %}" alt="Logo" id="logo">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-icons">
+                    <ul class="nav-icons-list">
+                        <li>
+						    <a href="{% url 'transaction_history' %}"><i class="fa-solid fa-list"></i></a>
+                        </li>
+                        <li>
+                            <a href="{% url 'deposit' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                        <li>
+                            <a href="{% url 'sell' %}"><i class="fa-solid fa-hand-holding-dollar"></i></a>
+                        </li>
+                        <li>
+                            <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="dashboard-body">
+
+
+            <div class="dashboard-header">
+                <h1 class="header-title">
+                    Binary Options
+                </h1>
+
+            </div>
+
+            <div class="dashboard-tokens">
+                <div class="tokens-selection-1">
+                    <select class="select">
+                        <option value="0">Choose token A</option>
+                        <option value="1">Idea</option>
+                        <option value="2">Materia</option>
+                    </select>
+                </div>
+
+                <div class="tokens-selection-2">
+                    <select class="select">
+                        <option value="0">Choose token B</option>
+                        <option value="1">Idea</option>
+                        <option value="2">Materia</option>
+                    </select>
+                </div>
+
+                <div class="input-wrapper">
+                    <input name="price" placeholder="Your bet" type="number" class="input-area">
+                </div>
+
+                <div class="time-bet-area">
+                    <input name="time" placeholder="Time" type="number" class="time-bet" min="3">
+                </div>
+
+                <div class="persent-area">
+                    <input name="persent" placeholder="%" type="number" class="persent" value="">
+                </div>
+
+                <div class="bet-area">
+
+                    <div class="call-bet">
+                        <button id="call-btn" name="call-btn" class="call-btn">
+                            <span class="call">Call</span>
+                            <div class="arrow">
+                                <a href=""><i class="fa-solid fa-arrow-up"></i></a>
+                            </div>
+                        </button>
+                        
+
+                    </div>
+
+                    
+                    <div class="put-bet">
+                        <button id="put-btn" name="put-btn" class="put-btn">
+                            <span class="call">Put</span>
+                            <div class="arrow">
+                                <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+                            </div>
+                        </button>
+                    </div>
+                    
+
+                    
+                </div>
+            </div>
+
+            <div class="dashboard-time">
+
+
+            </div>
+
+        </div>
+    </div>
+        <script src="{% static 'scripts/test.js' %}"></script>
+
+</body>
+</html>
