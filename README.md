@@ -1,4 +1,4 @@
-# BinaryOptionsBot
+# N-Options
 
 ## Running the project
 
